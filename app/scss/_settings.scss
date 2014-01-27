@@ -37,7 +37,8 @@
 // We use these to control various global styles
 // $body-bg: #fff;
 // $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$logo-menu-font: Montserrat, "Myriad Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$body-font-family: "Lato", "Myriad Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -50,7 +51,7 @@
 // $default-float: left;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
+$primary-color: #5C5C5C;
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
@@ -515,10 +516,10 @@
 // $off-canvas-link-border-bottom: 1px solid darken($off-canvas-bg, 5%);
 
 // Off Canvas Menu Icon Variables
-// $tabbar-menu-icon-color: #FFF;
+$tabbar-menu-icon-color: gray;
 // $tabbar-menu-icon-hover: darken($tabbar-menu-icon-color, 30%);
 
-// $tabbar-menu-icon-text-indent: rem-calc(35);
+$tabbar-menu-icon-text-indent: rem-calc(20);
 // $tabbar-menu-icon-width: $tabbar-height;
 // $tabbar-menu-icon-height: $tabbar-height;
 // $tabbar-menu-icon-line-height: rem-calc(33);
@@ -903,16 +904,16 @@
 
 // $include-html-tooltip-classes: $include-html-classes;
 
-// $has-tip-border-bottom: dotted 1px #ccc;
+ $has-tip-border-bottom: none;
 // $has-tip-font-weight: bold;
 // $has-tip-font-color: #333;
-// $has-tip-border-bottom-hover: dotted 1px darken($primary-color, 20%);
+ $has-tip-border-bottom-hover: none;
 // $has-tip-font-color-hover: $primary-color;
 // $has-tip-cursor-type: help;
 
 // $tooltip-padding: rem-calc(12);
 // $tooltip-bg: #333;
-// $tooltip-font-size: rem-calc(14);
+$tooltip-font-size: 0.8rem;
 // $tooltip-font-weight: normal;
 // $tooltip-font-color: #fff;
 // $tooltip-line-height: 1.3;
@@ -921,7 +922,7 @@
 // $tooltip-close-font-color: #777;
 // $tooltip-font-size-sml: rem-calc(14);
 // $tooltip-radius: $global-radius;
-// $tooltip-pip-size: 5px;
+$tooltip-pip-size: 6px;
 
 //
 // TOP BAR
@@ -976,7 +977,7 @@
 // $topbar-menu-link-font-size: rem-calc(13);
 // $topbar-menu-link-weight: bold;
 // $topbar-menu-link-color: #fff;
-// $topbar-menu-icon-color: #fff;
+// $topbar-menu-icon-color: gray;
 // $topbar-menu-link-color-toggled: #888;
 // $topbar-menu-icon-color-toggled: #888;
 
