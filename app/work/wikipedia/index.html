@@ -12,19 +12,32 @@
     <!-- endbuild -->
   </head>
   <body>
-<nav class="page-nav row">
+    <nav class="page-nav row">
       <section class="nav-list text-center large-12 columns">
         <ul class="centered-inline-list">
-          <li><h6><a href="/">Work</a></h6></li>
-          <li><h6><a href="/">Sandbox</a></h6></li>
-          <li><h6><a href="/">Contact</a></h6></li>
+          <li>
+            <h6><a href="/" title="View Portfolio" data-dropdown="projects-dropdown">Work <span class="caret">&#9662;</span></a></h6>
+            <ul id="projects-dropdown" class="f-dropdown" data-dropdown-content>
+              <li><a href="/"><em>All Projects</em></a></li>
+              <li><a href="/work/vmware">VMware</a></li>
+              <li><a href="/work/wikipedia">Wikipedia</a></li>
+              <li><a href="/work/highwire">Highwire</a></li>
+              <li><a href="/work/umhealth">University of Michigan Health</a></li>
+              <li><a href="/work/giftly">Giftly</a></li>
+              <li><a href="/work/comedians">Comedian Networks</a></li>
+              <li><a href="/work/kiva">Kiva Explorer</a></li>
+              <li><a href="/work/coremerchant">Core Merchant</a></li>
+            </ul>
+          </li>
+          <li><h6><a href="/experiments" title="View Design and Code Experiments">Experiments</a></h6></li>
+          <li><h6><a href="/contact" title="Contact Me">Contact</a></h6></li>
         </ul>
       </section>
     </nav>
 
     <header class="page-header row">
       <section class="logo text-center large-12 columns">
-        <h3 class="title"><a href="/">Munaf Assaf</a></h3>
+        <h3 class="title"><a href="/" title="Return to homepage">Munaf Assaf</a></h3>
         <h4 class="subtitle subheader">User Experience Designer</h4>
       </section>
     </header>
@@ -32,26 +45,18 @@
     <article class="portfolio-item">
       <header class="row">
         <div class="large-12 columns">
-          <h4>
-            Wikipedia
-            <a href="#" class="menu-icon right projects-dropdown-icon" title="Project List" data-dropdown="projects-dropdown"><span></span></a>
-            <ul id="projects-dropdown" class="f-dropdown" data-dropdown-content>
-              <li><a href="/work/vmware">VMware</a></li>
-              <li><a href="/work/vmware">Wikipedia</a></li>
-              <li><a href="/work/vmware">Highwire</a></li>
-              <li><a href="/work/vmware">University of Michigan Health</a></li>
-              <li><a href="/work/vmware">Giftly</a></li>
-              <li><a href="/work/vmware">Comedian Networks</a></li>
-              <li><a href="/work/vmware">Kiva Explorer</a></li>
-              <li><a href="/work/vmware">Core Merchant</a></li>
-            </ul>
-          </h4>
+          <h4>Wikipedia</h4>
         </div>
       </header>
 
+      <section class="row">
+        <div class="large-9 columns">
+          <h6 class="item-summary">From 2012&mdash;2013, I was a UX Designer for Wikipedia. I worked on increasing the editor base and improving new user engagement, as well as redefining the look and feel of its mobile website.</h6>
+        </div>
+      </section>
+
       <section class="row item-cover">
         <div class="large-9 columns">
-          <h6 class="item-summary">From 2012&ndash;2013, I was a UX Designer at Wikipedia. I primarily worked on editor engagement, mobile design, and implementing common user interface standards throughout Wikipedia.</h6>
           <img src="http://placehold.it/1000x600" />
         </div>
         <div class="large-3 columns">
@@ -80,18 +85,138 @@
                 </ul>
               </li>
               <li>
-                <header class="item-info-header">Projects</header>
+                <header class="item-info-header">Sub-Projects</header>
                 <ul class="info-item-list">
-                  <li><a href="#wikipedia-mobile">Wikipedia Mobile</a></li>
-                  <li><a href="#mediawiki-ui">MediaWiki UI</a></li>
-                  <li><a href="#mediawiki-ui">Onboarding New Users</a></li>
-                  <li><a href="#mediawiki-ui">Guided Tours</a></li>
-                  <li><a href="#mediawiki-ui">Account Creation</a></li>
-                  <li><a href="#mediawiki-ui">Post-Edit Feedback</a></li>
+                  <li>Wikipedia Mobile</li>
+                  <li>MediaWiki UI</li>
+                  <li>Onboarding New Users</li>
+                  <li>Guided Tours</li>
+                  <li>Account Creation</li>
+                  <li>Post-Edit Feedback</li>
                 </ul>
               </li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      <section class="row project-section">
+        <div class="large-9 columns">
+          <ul class="project-slideshow" data-orbit>
+            <li data-asset-id="mobile-nav.png">
+              <img src="mobile-nav.png" alt="Primary navigation based on information architecture research." />
+              <div class="orbit-caption">
+                <em>Mobile Navigation.</em> I designed this based on survey results, user interviews, and a card sort conducted with internal stakeholders. 
+              </div>
+            </li>
+            <li data-asset-id="mobile-before-and-after.png">
+              <img src="mobile-before-and-after.png" alt="Wikipedia Mobile's main page before and after the redesign." />
+              <div class="orbit-caption">
+                <em>Before and after.</em> Wikipedia Mobile's main page before and after the redesign. 
+              </div>
+            </li>
+            <li data-asset-id="mobile-login-conf.png">
+              <img src="mobile-login-conf.png" alt="A mobile article page redirect after logging in." />
+              <div class="orbit-caption">
+                <em>Post-Login.</em> A mobile article page redirect after logging in. 
+              </div>
+            </li>
+            <li data-asset-id="icon-iterations.jpg">
+              <img src="icon-iterations.jpg" alt="Early iterations of icon sets for the mobile website." />
+              <div class="orbit-caption">
+                <em>Icon Design.</em> Early iterations of icon sets for the mobile website. 
+              </div>
+            </li>
+            <li data-asset-id="chart-edit-support.png">
+              <img src="images/chart-edit-support.png" alt="Editing support on Wikipedia" />
+              <div class="orbit-caption">
+                <em>Survey: Mobile usage on Wikipedia.</em> I used these results and other user research data to derive an information architecture for Wikipedia's mobile website. 
+              </div>
+            </li>
+            <li data-asset-id="mobile-affinitywall-1.jpg">
+              <img src="images/mobile-affinitywall-1.jpg" alt="Affinity Wall for Mobile Information Architecture" />
+              <div class="orbit-caption">
+                <em>Card Sort &amp; Affinity Wall.</em> I led a card sort and affinity wall session to derive an information architecture for Wikipedia's mobile website. 
+              </div>
+            </li>
+          </ul>
+          <ul class="clearing-thumbs" data-clearing>
+            <li data-asset-id="mobile-nav.png"><a href="mobile-nav.png"><img data-caption="<em>Mobile Navigation.</em> I designed this based on survey results, user interviews, and a card sort conducted with internal stakeholders. " src="mobile-nav.png"></a></li>
+            <li data-asset-id="mobile-before-and-after.png"><a href="mobile-before-and-after.png"><img data-caption="<em>Before and after.</em> Wikipedia Mobile's main page before and after the redesign." src="mobile-before-and-after.png"></a></li>
+            <li data-asset-id="mobile-login-conf.png"><a href="mobile-login-conf.png"><img data-caption="<em>Post-login.</em> A mobile article page redirect after logging in." src="mobile-login-conf.png"></a></li>
+            <li data-asset-id="icon-iterations.jpg"><a href="icon-iterations.jpg"><img data-caption="<em>Icon Design.</em> Early iterations of icon sets for the mobile website." src="icon-iterations.jpg"></a></li>
+            <li data-asset-id="chart-edit-support.png"><a href="images/chart-edit-support.png"><img data-caption="<em>Survey: Mobile usage on Wikipedia.</em> I used these results and other user research data to derive an information architecture for Wikipedia's mobile website. " src="images/chart-edit-support.png"></a></li>
+            <li data-asset-id="mobile-affinitywall-1.jpg"><a href="images/mobile-affinitywall-1.jpg"><img data-caption="<em>Card Sort &amp; Affinity Wall.</em> I led a card sort and affinity wall session to derive an information architecture for Wikipedia's mobile website." src="images/mobile-affinitywall-1.jpg"></a></li>
+          </ul>
+        </div>
+        <div class="large-3 columns project-description">
+          <h6>Mobile Design</h6>
+          <p>I co-designed the typography, navigation, icons, and site chrome for Wikipedia's mobile website, which is becoming the dominant medium for accessing Wikipedia articles.</p>
+        </div>
+      </section>
+
+      <section class="row project-section">
+        <div class="large-9 columns">
+          <ul class="project-slideshow" data-orbit>
+            <li data-asset-id="chart-edit-support.png">
+              <img src="images/chart-edit-support.png" alt="Editing support on Wikipedia" />
+              <div class="orbit-caption">
+                <em>Survey: Mobile usage on Wikipedia.</em> I used these results and other user research data to derive an information architecture for Wikipedia's mobile website. 
+              </div>
+            </li>
+            <li data-asset-id="mobile-affinitywall-1.jpg">
+              <img src="images/mobile-affinitywall-1.jpg" alt="Affinity Wall for Mobile Information Architecture" />
+              <div class="orbit-caption">
+                <em>Card Sort &amp; Affinity Wall.</em> I led a card sort and affinity wall session to derive an information architecture for Wikipedia's mobile website. 
+              </div>
+            </li>
+          </ul>
+          <ul class="clearing-thumbs" data-clearing>
+            <li data-asset-id="chart-edit-support.png"><a href="images/chart-edit-support.png"><img data-caption="<em>Survey: Mobile usage on Wikipedia.</em> I used these results and other user research data to derive an information architecture for Wikipedia's mobile website. " src="images/chart-edit-support.png"></a></li>
+            <li data-asset-id="mobile-affinitywall-1.jpg"><a href="images/mobile-affinitywall-1.jpg"><img data-caption="<em>Card Sort &amp; Affinity Wall.</em> I led a card sort and affinity wall session to derive an information architecture for Wikipedia's mobile website." src="images/mobile-affinitywall-1.jpg"></a></li>
+            <li data-asset-id="mobile-affinitywall-2.jpg"><a href="images/mobile-affinitywall-2.jpg"><img data-caption="<em>Card Sort &amp; Affinity Wall.</em> I led a card sort and affinity wall session to derive an information architecture for Wikipedia's mobile website." src="images/mobile-affinitywall-2.jpg"></a></li>
+            <li data-asset-id="chart-edit-support.png"><a href="images/chart-edit-support.png"><img data-caption="<em>Survey: Mobile usage on Wikipedia.</em> I used these results and other user research data to derive an information architecture for Wikipedia's mobile website. " src="images/chart-edit-support.png"></a></li>
+            <li data-asset-id="mobile-affinitywall-1.jpg"><a href="images/mobile-affinitywall-1.jpg"><img data-caption="<em>Card Sort &amp; Affinity Wall.</em> I led a card sort and affinity wall session to derive an information architecture for Wikipedia's mobile website." src="images/mobile-affinitywall-1.jpg"></a></li>
+            <li data-asset-id="mobile-affinitywall-2.jpg"><a href="images/mobile-affinitywall-2.jpg"><img data-caption="<em>Card Sort &amp; Affinity Wall.</em> I led a card sort and affinity wall session to derive an information architecture for Wikipedia's mobile website." src="images/mobile-affinitywall-2.jpg"></a></li>
+          </ul>
+        </div>
+        <div class="large-3 columns project-description">
+          <h6>User Onboarding</h6>
+          <p>My redesigns of Wikipedia's account creation and user onboarding process led to significantly increased signups, new user engagement, and editor retention.</p>
+        </div>
+      </section>
+
+      <section class="row project-section">
+        <div class="large-9 columns">
+          <ul class="project-slideshow" data-orbit>
+            <li data-asset-id="chart-edit-support.png">
+              <img src="images/chart-edit-support.png" alt="Editing support on Wikipedia" />
+              <div class="orbit-caption">
+                <em>Survey: Mobile usage on Wikipedia.</em> I used these results and other user research data to derive an information architecture for Wikipedia's mobile website. 
+              </div>
+            </li>
+            <li data-asset-id="mobile-affinitywall-1.jpg">
+              <img src="images/mobile-affinitywall-1.jpg" alt="Affinity Wall for Mobile Information Architecture" />
+              <div class="orbit-caption">
+                <em>Card Sort &amp; Affinity Wall.</em> I led a card sort and affinity wall session to derive an information architecture for Wikipedia's mobile website. 
+              </div>
+            </li>
+            <li data-asset-id="mobile-affinitywall-2.jpg">
+              <img src="images/mobile-affinitywall-2.jpg" alt="Affinity Wall for Mobile Information Architecture" />
+              <div class="orbit-caption">
+                <em>Card Sort &amp; Affinity Wall.</em> I led a card sort and affinity wall session to derive an information architecture for Wikipedia's mobile website. 
+              </div>
+            </li>
+          </ul>
+          <ul class="clearing-thumbs" data-clearing>
+            <li data-asset-id="chart-edit-support.png"><a href="images/chart-edit-support.png"><img data-caption="<em>Survey: Mobile usage on Wikipedia.</em> I used these results and other user research data to derive an information architecture for Wikipedia's mobile website. " src="images/chart-edit-support.png"></a></li>
+            <li data-asset-id="mobile-affinitywall-1.jpg"><a href="images/mobile-affinitywall-1.jpg"><img data-caption="<em>Card Sort &amp; Affinity Wall.</em> I led a card sort and affinity wall session to derive an information architecture for Wikipedia's mobile website." src="images/mobile-affinitywall-1.jpg"></a></li>
+            <li data-asset-id="mobile-affinitywall-2.jpg"><a href="images/mobile-affinitywall-2.jpg"><img data-caption="<em>Card Sort &amp; Affinity Wall.</em> I led a card sort and affinity wall session to derive an information architecture for Wikipedia's mobile website." src="images/mobile-affinitywall-2.jpg"></a></li>
+          </ul>
+        </div>
+        <div class="large-3 columns project-description">
+          <h6>Post-Edit Feedback</h6>
+          <p>Feedback message design for users who completed a successful Wikipedia edit. Incorporating this design led to increased rates of edits, especially among new users.</p>
         </div>
       </section>
 

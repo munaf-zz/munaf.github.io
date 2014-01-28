@@ -23,6 +23,15 @@
 // Variables
 //----------------------------------------------------------------------
 $deemphasized-text-color: darken($secondary-color, 20%);
+$header-font-family: 'Montserrat', 'Myriad Pro', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $header-font-family;
+}
 
 //----------------------------------------------------------------------
 // Header
@@ -36,19 +45,32 @@ $deemphasized-text-color: darken($secondary-color, 20%);
 	color: #666;
 }
 
-.title, 
-.page-nav {
-	font-family: Montserrat, 'Myriad Pro', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
-	text-transform: uppercase;
-}
-
-.page-nav {
-	margin-top: 1rem;
-	font-size: 0.7rem;
-}
-
 .title {
+	font-family: $header-font-family;
+	text-transform: uppercase;
 	letter-spacing: 0.2rem;
+}
+
+#projects-dropdown,
+.page-nav h6 {
+	font-family: $body-font-family;
+}
+
+#projects-dropdown {
+	text-align: left;
+
+	li {
+		display: block;
+		margin-right: 0.5rem;
+		font-size: 0.9rem;
+	}
+}
+
+.page-nav h6 {
+	margin-top: 1rem;
+	font-size: 0.9rem;
+	font-weight: 200;
+	text-transform: uppercase;
 }
 
 .subtitle {
@@ -84,6 +106,22 @@ $deemphasized-text-color: darken($secondary-color, 20%);
 //----------------------------------------------------------------------
 // Portfolio Item
 //----------------------------------------------------------------------
+.title-dropdown {
+	cursor: pointer;
+}
+
+.caret {
+	font-size: 1rem;
+}
+
+#projects-dropdown {
+	font-family: $body-font-family;
+
+	header {
+		padding-left: 0.5rem;
+		font-weight: 300;
+	}
+}
 .projects-dropdown-icon {
 	span {
 		top: -0.2rem !important;
@@ -91,6 +129,7 @@ $deemphasized-text-color: darken($secondary-color, 20%);
 }
 
 .item-summary {
+	font-family: $body-font-family;
 	margin-bottom: 1rem;
 }
 
@@ -99,6 +138,7 @@ $deemphasized-text-color: darken($secondary-color, 20%);
 
 	background: none;
 	border: none;
+	padding-top: 0;
 	padding-left: 0;
 
 	ul {
@@ -110,13 +150,47 @@ $deemphasized-text-color: darken($secondary-color, 20%);
 .info-item-list {
 	margin-left: 0;
 	margin-bottom: 0.68rem;
-	font-size: 0.8rem;
+	font-size: 0.85rem;
 }
 
 .item-info-header {
 	font-size: 0.7rem;
+	font-family: $header-font-family;
 	color: $deemphasized-text-color;
 	text-transform: uppercase;
+}
+
+.project-section {
+	margin-top: 1.5rem;
+}
+
+ul[data-orbit] {
+	li {
+		background-color: white;
+		overflow: hidden;
+		cursor: -webkit-zoom-in !important; 
+		cursor: -moz-zoom-in !important;
+		height: 400px;
+	}
+
+	a,img {
+		margin: 0 auto;
+	}
+}
+
+ul[data-clearing] {
+	display: none;
+}
+
+.project-slideshow {
+}
+
+.project-description {
+
+	p {
+		font-size: 0.85rem;
+	}
+
 }
 
 //----------------------------------------------------------------------

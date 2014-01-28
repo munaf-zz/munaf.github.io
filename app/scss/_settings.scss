@@ -212,9 +212,9 @@ $primary-color: #5C5C5C;
 // $include-html-clearing-classes: $include-html-classes;
 
 // We use these to set the background colors for parts of Clearing.
-// $clearing-bg: #333;
+$clearing-bg: #111;
 // $clearing-caption-bg: $clearing-bg;
-// $clearing-carousel-bg: rgba (51,51,51,0.8);
+$clearing-carousel-bg: #111;
 // $clearing-img-bg: $clearing-bg;
 
 // We use these to style the close button
@@ -226,14 +226,14 @@ $primary-color: #5C5C5C;
 // $clearing-arrow-color: $clearing-close-color;
 
 // We use these to style captions
-// $clearing-caption-font-color: #ccc;
-// $clearing-caption-font-size: 0.875em;
-// $clearing-caption-padding: 10px 30px 20px;
+$clearing-caption-font-color: #ccc;
+$clearing-caption-font-size: 1rem;
+$clearing-caption-padding: 10px 30px 20px;
 
 // We use these to make the image and carousel height and style
-// $clearing-active-img-height: 85%;
-// $clearing-carousel-height: 120px;
-// $clearing-carousel-thumb-width: 120px;
+$clearing-active-img-height: 80%;
+$clearing-carousel-height: 120px;
+$clearing-carousel-thumb-width: 120px;
 // $clearing-carousel-thumb-active-border: 1px solid rgb(255,255,255);
 
 // Dropdown
@@ -545,18 +545,18 @@ $tabbar-menu-icon-text-indent: rem-calc(20);
 
 // We use these to control the caption styles
 // $orbit-container-bg: none;
-// $orbit-caption-bg: rgba(51,51,51, 0.8);
+$orbit-caption-bg: rgba(20,20,20, 0.8);
 // $orbit-caption-font-color: #fff;
-// $orbit-caption-font-size: rem-calc(14);
-// $orbit-caption-position: "bottom"; // Supported values: "bottom", "under"
+$orbit-caption-font-size: rem-calc(10);
+$orbit-caption-position: "bottom"; // Supported values: "bottom", "under"
 // $orbit-caption-padding: rem-calc(10,14);
 // $orbit-caption-height: auto;
 
 // We use these to control the left/right nav styles
 // $orbit-nav-bg: none;
 // $orbit-nav-bg-hover: rgba(0,0,0,0.3);
-// $orbit-nav-arrow-color: #fff;
-// $orbit-nav-arrow-color-hover: #fff;
+$orbit-nav-arrow-color: #ccc;
+$orbit-nav-arrow-color-hover: #fff;
 
 // We use these to control the timer styles
 // $orbit-timer-bg: rgba(255,255,255,0.3);

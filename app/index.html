@@ -15,9 +15,22 @@
     <nav class="page-nav row">
       <section class="nav-list text-center large-12 columns">
         <ul class="centered-inline-list">
-          <li><h6><a href="/" title="Go to my list of projects">Work</a></h6></li>
-          <li><h6><a href="/" title="Check out some of my code experiments">Sandbox</a></h6></li>
-          <li><h6><a href="/">Contact</a></h6></li>
+          <li>
+            <h6><a href="/" title="View Portfolio" data-dropdown="projects-dropdown">Work <span class="caret">&#9662;</span></a></h6>
+            <ul id="projects-dropdown" class="f-dropdown" data-dropdown-content>
+              <li><a href="/"><em>All Projects</em></a></li>
+              <li><a href="/work/vmware">VMware</a></li>
+              <li><a href="/work/wikipedia">Wikipedia</a></li>
+              <li><a href="/work/highwire">Highwire</a></li>
+              <li><a href="/work/umhealth">University of Michigan Health</a></li>
+              <li><a href="/work/giftly">Giftly</a></li>
+              <li><a href="/work/comedians">Comedian Networks</a></li>
+              <li><a href="/work/kiva">Kiva Explorer</a></li>
+              <li><a href="/work/coremerchant">Core Merchant</a></li>
+            </ul>
+          </li>
+          <li><h6><a href="/experiments" title="View Design and Code Experiments">Experiments</a></h6></li>
+          <li><h6><a href="/contact" title="Contact Me">Contact</a></h6></li>
         </ul>
       </section>
     </nav>
