@@ -161,7 +161,7 @@ h6 {
 }
 
 .project-section {
-	margin-top: 1.5rem;
+	margin-top: 3rem;
 }
 
 ul[data-orbit] {
@@ -190,7 +190,10 @@ ul[data-clearing] {
 }
 
 .project-description {
-
+	h6 {
+		border-top: 1px solid $primary-color;
+		padding-top: 0.25rem;
+	}
 	p {
 		font-size: 0.85rem;
 	}
