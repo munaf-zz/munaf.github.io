@@ -9,6 +9,16 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic);
 
 @font-face {
+  font-family: 'EntypoRegular';
+  src: url('fonts/entypo.eot');
+  src: url('fonts/entypo.eot?#iefix') format('embedded-opentype'),
+       url('fonts/entypo.woff') format('woff'),
+       url('fonts/entypo.ttf') format('truetype'),
+       url('fonts/entypo#EntypoRegular') format('svg');
+       font-weight: normal; 
+       font-style: normal;
+}
+@font-face {
   font-family: 'EntypoSocialRegular';
   src: url('fonts/entypo-social.eot');
   src: url('fonts/entypo-social.eot?#iefix') format('embedded-opentype'),
@@ -110,9 +120,8 @@ h6 {
 	display: inline-block;
 	position: absolute;
 	right: 0;
-	margin-top: 0.4rem;
+	margin-top: -0.5rem;
 	margin-bottom: 0;
-	font-size: 0.7rem;
 	font-weight: 200;
 
 	&.unstuck {
@@ -224,6 +233,22 @@ footer {
 	li {
 		margin-right: 0.5em;
 	}
+}
+
+.entypo-icon {
+	font-family: 'EntypoRegular';
+	font-size: 3rem;
+	font-weight: normal;
+	line-height: 1;
+
+	// Header icon for portfolio list
+	&.layout:before{ content:'\268F'; }
+
+	// Next icon
+	&.chevron-right:before{ content:'\E75E'; }
+
+	// Next icon
+	&.chevron-left:before{ content:'\E75D'; }
 }
 
 // https://gist.github.com/pnull/4510484

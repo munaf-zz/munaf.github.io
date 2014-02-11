@@ -57,13 +57,17 @@ $(document).ready(function() {
 
     if (browserTop > headerTop) {
       $projectNav.css({
-        left: navLeft,
-        "background": "rgba(255, 255, 255, 0.8)"
+        left: navLeft
+      });
+      $titleBar.css({
+        background: "rgba(255, 255, 255, 0.9)"
       });
     } else {
       $projectNav.css({
-        right: 0,
-        "background": "none"
+        right: 0
+      });
+      $titleBar.css({
+        background: "none"
       });
     }
   });
