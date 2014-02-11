@@ -45,18 +45,26 @@ $(document).ready(function() {
     }
   });
 
-  var d = $('[data-magellan-expedition="fixed"]').offset().top;
+  var $titleBar   = $("[data-magellan-expedition='fixed']"),
+      $title      = $titleBar.find('h4').find('span'),
+      $projectNav = $(".project-nav-header");
+
+  var navLeft   = $projectNav.position().left;
+  var headerTop = $titleBar.offset().top;
 
   $(window).scroll(function(e) {
-    var top = $(window).scrollTop(),
-        $nav = $(".project-nav-header");
+    var browserTop = $(window).scrollTop();
 
-    if (top > d) {
-      $nav.css({
-        "display": "inline-block"
+    if (browserTop > headerTop) {
+      $projectNav.css({
+        left: navLeft,
+        "background": "rgba(255, 255, 255, 0.8)"
       });
     } else {
-      $nav.hide();
+      $projectNav.css({
+        right: 0,
+        "background": "none"
+      });
     }
   });
 
