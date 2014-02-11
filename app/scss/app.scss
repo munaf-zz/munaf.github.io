@@ -237,6 +237,10 @@ footer {
 	font-weight: normal;
 	line-height: 1;
 
+	&.large {
+		font-size: 4rem;
+	}
+
 	&.linkedin:before {
 	content: '\F318';
 	}
@@ -247,5 +251,13 @@ footer {
 
 	&.github:before {
 		content: '\F300';
+	}
+
+	&.rdio:before { 
+		content:'\F324'; 
+	}
+
+	&.googleplus:before { 
+		content:'\F30F'; 
 	}
 }
