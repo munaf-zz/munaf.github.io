@@ -45,7 +45,20 @@ $(document).ready(function() {
     }
   });
 
+  var d = $('[data-magellan-expedition="fixed"]').offset().top;
+
+  $(window).scroll(function(e) {
+    var top = $(window).scrollTop(),
+        $nav = $(".project-nav-header");
+
+    if (top > d) {
+      $nav.css({
+        "display": "inline-block"
+      });
+    } else {
+      $nav.hide();
+    }
+  });
+
 });
-
-
 

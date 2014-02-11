@@ -106,26 +106,12 @@ h6 {
 //----------------------------------------------------------------------
 // Portfolio Item
 //----------------------------------------------------------------------
-.title-dropdown {
-	cursor: pointer;
-}
-
-.caret {
-	font-size: 1rem;
-}
-
-#projects-dropdown {
-	font-family: $body-font-family;
-
-	header {
-		padding-left: 0.5rem;
-		font-weight: 300;
-	}
-}
-.projects-dropdown-icon {
-	span {
-		top: -0.2rem !important;
-	}
+.project-nav-header {
+	display: none;
+	margin-bottom: 0;
+	margin-left: 5rem;
+	font-size: 0.75rem;
+	font-weight: 200;
 }
 
 .item-summary {
