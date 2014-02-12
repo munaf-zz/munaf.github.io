@@ -337,8 +337,6 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('deploy', [
-        'jshint',
-        'test',
         'build',
         'gh-pages:master'
     ]);
