@@ -46,31 +46,40 @@ $(document).ready(function() {
   });
 
   var $titleBar   = $("[data-magellan-expedition='fixed']"),
-      $title      = $titleBar.find('h4').find('span'),
-      $projectNav = $(".project-nav-header");
+      $projectNav = $(".project-nav-header"),
+      $title;
 
-  var navLeft   = $projectNav.position().left;
-  var headerTop = $titleBar.offset().top;
 
-  $(window).scroll(function(e) {
-    var browserTop = $(window).scrollTop();
+  if ($projectNav && $titleBar) {
+    $title = $titleBar.find('h4').find('span');
+    setupScrollEvent();
 
-    if (browserTop > headerTop) {
-      $projectNav.css({
-        left: navLeft
-      });
-      $titleBar.css({
-        background: "rgba(255, 255, 255, 0.9)"
-      });
-    } else {
-      $projectNav.css({
-        right: 0
-      });
-      $titleBar.css({
-        background: "none"
-      });
-    }
-  });
+  }
+
+  function setupScrollEvent() {
+    var navLeft   = $projectNav.position().left;
+    var headerTop = $titleBar.offset().top;
+
+    $(window).scroll(function(e) {
+      var browserTop = $(window).scrollTop();
+
+      if (browserTop > headerTop) {
+        $projectNav.css({
+          left: navLeft
+        });
+        $titleBar.css({
+          background: "rgba(255, 255, 255, 0.9)"
+        });
+      } else {
+        $projectNav.css({
+          right: 0
+        });
+        $titleBar.css({
+          background: "none"
+        });
+      }
+    });
+  }
 
 });
 
