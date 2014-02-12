@@ -235,12 +235,6 @@ module.exports = function (grunt) {
                 cwd: '<%= yeoman.app %>/styles',
                 dest: '.tmp/styles/',
                 src: '{,*/}*.css'
-            },
-            foundation: {
-                expand: true, 
-                cwd: '<%= yeoman.app %>/bower_components/foundation/js', 
-                src: ['foundation.min.js'], 
-                dest: '<%= yeoman.dist %>/bower_components/foundation/js/'
             }
         },
         modernizr: {
@@ -324,7 +318,6 @@ module.exports = function (grunt) {
         'uglify',
         'modernizr',
         'copy:dist',
-        'copy:foundation',
         'rev',
         'usemin'
     ]);
