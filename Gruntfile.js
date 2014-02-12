@@ -221,7 +221,8 @@ module.exports = function (grunt) {
                     cwd: '<%= yeoman.app %>',
                     dest: '<%= yeoman.dist %>',
                     src: [
-                        '*.{ico,png,txt}',
+                        'work/*/*',
+                        '{,*/}*.{ico,png,txt}',
                         '.htaccess',
                         'images/{,*/}*.{webp,gif}',
                         'styles/fonts/{,*/}*.*',
@@ -262,6 +263,22 @@ module.exports = function (grunt) {
                 'svgmin',
                 'htmlmin'
             ]
+        },
+        'gh-pages': {
+            options: {
+                base: 'dist',
+                message: 'Deploy via Gruntfile gh-pages task',
+                user: {
+                    name: 'Munaf Assaf',
+                    email: 'munaf.assaf@gmail.com'
+                }
+            },
+            'master': {
+                options: {
+                    branch: 'master'
+                },
+                src: ['**/*']
+            }
         }
     });
 
@@ -311,6 +328,13 @@ module.exports = function (grunt) {
         'compass',
         'connect:test',
         'dalek'
+    ]);
+
+    grunt.registerTask('deploy', [
+        'jshint',
+        'test',
+        'build',
+        'gh-pages:master'
     ]);
 
     grunt.registerTask('default', [
