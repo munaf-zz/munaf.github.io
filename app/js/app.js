@@ -49,6 +49,22 @@ $(document).ready(function() {
       $projectNav = $(".project-nav-header"),
       $title;
 
+  var $overlays = $(".overlay");
+
+  $overlays.each(function() {
+    var $overlay = $(this),
+        $span    = $overlay.find('span:first-of-type'),
+        top = ($overlay.outerHeight() - $span.outerHeight())/2,
+        left = ($overlay.outerWidth() - $span.outerWidth())/2;
+
+        console.log('padding=', $span.css('padding-top'));
+
+    $overlay.css({
+      "padding-top": top + parseInt($span.css('padding-top'))
+      //"left": left
+    });
+
+  });
 
   if ($projectNav && $titleBar) {
     $title = $titleBar.find('h4').find('span');
