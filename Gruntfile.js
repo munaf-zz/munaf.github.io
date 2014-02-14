@@ -222,6 +222,7 @@ module.exports = function (grunt) {
                     src: [
                         'work/*/**/*',
                         '{,*/}*.{ico,png,jpg,jpeg,txt}',
+                        'CNAME',
                         '.htaccess',
                         'images/{,*/}*.{webp,gif}',
                         'styles/fonts/{,*/}*.*',
