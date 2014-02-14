@@ -45,6 +45,23 @@ $(document).ready(function() {
     }
   });
 
+  var $overlays = $(".overlay");
+
+  $overlays.each(function() {
+    var $overlay = $(this),
+        $span    = $overlay.find('span:first-of-type'),
+        top = ($overlay.outerHeight() - $span.outerHeight())/2,
+        left = ($overlay.outerWidth() - $span.outerWidth())/2;
+
+        console.log('padding=', $span.css('padding-top'));
+
+    $overlay.css({
+      "padding-top": top + parseInt($span.css('padding-top'))
+      //"left": left
+    });
+
+  });
+
   var $nextLinks = $('.chevron-right'),
       $prevLinks = $('.chevron-left'),
       filename = window.location.pathname.split( '/' ).pop().trim();
@@ -83,8 +100,6 @@ $(document).ready(function() {
       next: "VMware"
     }
   }
-
-  console.log('/'+filename+'/');
 
   $nextLinks.each(function() {
     $(this).attr("title", pages[filename].next);
