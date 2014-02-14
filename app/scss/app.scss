@@ -62,11 +62,13 @@ a {
 	letter-spacing: 0.2rem;
 }
 
-.nav-list ul {
+.nav-list ul,
+footer ul {
 	margin-top: 1rem;
 }
 
-.nav-list a {
+.nav-list a,
+footer ul a {
 	border: 0;
 	color: $primary-color;
 	margin-top: 1rem;
@@ -74,6 +76,10 @@ a {
 	font-weight: 200;
 	font-family: $body-font-family;
 	text-transform: uppercase;
+
+	&:hover {
+		color: $primary-color;
+	}
 }
 
 .subtitle {
@@ -161,8 +167,7 @@ a {
 //----------------------------------------------------------------------
 .project-nav-header {
 	display: inline-block;
-	position: absolute;
-	right: 0;
+	float: right;
 	margin-top: -0.5rem;
 	margin-bottom: 0;
 	font-weight: 200;

@@ -45,57 +45,52 @@ $(document).ready(function() {
     }
   });
 
-  var $titleBar   = $("[data-magellan-expedition='fixed']"),
-      $projectNav = $(".project-nav-header"),
-      $title;
+  var $nextLinks = $('.chevron-right'),
+      $prevLinks = $('.chevron-left'),
+      filename = window.location.pathname.split( '/' ).pop().trim();
 
-  var $overlays = $(".overlay");
+  var pages = {
+    "vmware.html": {
+      prev: "Core Merchant",
+      next: "Wikipedia"
+    },
+    "wikipedia.html": {
+      prev: "VMware",
+      next: "Visualizations &amp; Experiments"
+    },
+    "experiments.html": {
+      prev: "Wikipedia",
+      next: "Giftly"
+    },
+    "giftly.html": {
+      prev: "University of Michigan Health System",
+      next: "Visualizations &amp; Experiments"
+    },
+    "umhealth.html": {
+      prev: "Giftly",
+      next: "Highwire"
+    },
+    "highwire.html": {
+      prev: "University of Michigan Health System",
+      next: "Visual.ly",
+    },
+    "visually.html": {
+      prev: "Highwire",
+      next: "Core Merchant"
+    },
+    "coremerchant.html": {
+      prev: "Visual.ly",
+      next: "VMware"
+    }
+  }
 
-  $overlays.each(function() {
-    var $overlay = $(this),
-        $span    = $overlay.find('span:first-of-type'),
-        top = ($overlay.outerHeight() - $span.outerHeight())/2,
-        left = ($overlay.outerWidth() - $span.outerWidth())/2;
+  console.log('/'+filename+'/');
 
-        console.log('padding=', $span.css('padding-top'));
-
-    $overlay.css({
-      "padding-top": top + parseInt($span.css('padding-top'))
-      //"left": left
-    });
-
+  $nextLinks.each(function() {
+    $(this).attr("title", pages[filename].next);
   });
-
-  if ($projectNav && $titleBar) {
-    $title = $titleBar.find('h4').find('span');
-    setupScrollEvent();
-
-  }
-
-  function setupScrollEvent() {
-    var navLeft   = $projectNav.position().left;
-    var headerTop = $titleBar.offset().top;
-
-    $(window).scroll(function(e) {
-      var browserTop = $(window).scrollTop();
-
-      if (browserTop > headerTop) {
-        $projectNav.css({
-          left: navLeft
-        });
-        $titleBar.css({
-          background: "rgba(255, 255, 255, 0.9)"
-        });
-      } else {
-        $projectNav.css({
-          right: 0
-        });
-        $titleBar.css({
-          background: "none"
-        });
-      }
-    });
-  }
-
+  $prevLinks.each(function() {
+    $(this).attr("title", pages[filename].prev);
+  });
 });
 
