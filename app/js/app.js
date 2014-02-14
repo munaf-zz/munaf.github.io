@@ -3,6 +3,9 @@
 
 
 $(document).ready(function() {
+
+  // -------------------------------------------------------------------
+  // Orbit Slideshows
   var $orbit = $("ul[data-orbit]");
 
   $(document).foundation({
@@ -60,6 +63,8 @@ $(document).ready(function() {
 
   });*/
 
+  // -------------------------------------------------------------------
+  // Next/Prev Link Titles
   var $nextLinks = $('.chevron-right'),
       $prevLinks = $('.chevron-left'),
       filename = window.location.pathname.split( '/' ).pop().trim();
@@ -98,12 +103,90 @@ $(document).ready(function() {
       next: "VMware"
     }
   }
-
   $nextLinks.each(function() {
     $(this).attr("title", pages[filename].next);
   });
   $prevLinks.each(function() {
     $(this).attr("title", pages[filename].prev);
   });
+
+  // -------------------------------------------------------------------
+  // Google Analytics Instrumentation
+  var $navLinks = $("nav").find("a"),
+      $footerNav = $("footer").find("ul").not(".social-icons").find("a"),
+      $footerSocial = $("footer").find(".social-icon"),
+      $portfolioThumbnails = $(".portfolio-item").find("a"),
+      $articleImages = $(".project-section").find("img"),
+      $headerProjectNav = $("header").find(".project-nav-header").find("a"),
+      $footerProjectNav = $("section").find(".project-nav-header").find("a"),
+      $projectSummaryLink = $(".item-summary").find("a"),
+      $projectTextLink = $(".project-description").find("a");
+
+  $navLinks.on("click", function() {
+    clickEvent("link", "Top Nav: " + $(this).attr("href"));
+  });
+
+  $footerNav.on("click", function() {
+    clickEvent("link", "Footer Nav: " + $(this).attr("href"));
+  });
+
+  $footerSocial.on("click", function() {
+    clickEvent("social-icon", "Footer Social: " + $(this).attr("href"));
+  });
+
+  $portfolioThumbnails.on("click", function() {
+    clickEvent("image", "Portfolio Thumbnail (" + filename + "): " + $(this).attr("href"));
+  });
+
+  $orbit.find(".orbit-next").on("click", function() {
+    clickEvent("slideshow", "Slideshow Next (" + filename + ")");
+  });
+
+  $orbit.find(".orbit-prev").on("click", function() {
+    clickEvent("slideshow", "Slideshow Prev (" + filename + ")");
+  });
+
+  $articleImages.on("click", function() {
+    clickEvent("image", "Image Click: " + $(this).attr("src"));
+  });
+
+  $headerProjectNav.on("click", function() {
+    projectNavEvent($(this), "Header");
+  });
+
+  $footerProjectNav.on("click", function() {
+    projectNavEvent($(this), "Footer");
+  });
+
+  $projectSummaryLink.on("click", function() {
+    clickEvent("link", "Project Summary (outbound): " + $(this).attr("href"));
+  });
+
+  $projectTextLink.on("click", function() {
+    clickEvent("link", "Project Text (outbound): " + $(this).attr("href"));
+  });
+
+  function projectNavEvent($el, location) {
+    var name = "";
+
+    if ($el.hasClass('chevron-right')) {
+      name = "next";
+    } else if ($el.hasClass('chevron-left')) {
+      name = "prev";
+    } else if ($el.hasClass('layout')) {
+      name = "portfolio list";
+    } else {
+      name = "error";
+    }
+    clickEvent("icon", location + " Icon Click (" + name + "): " + $el.attr("href"));
+  }
+
+  function clickEvent(element, category) {
+    ga('send', 'event', element, 'click', category);
+  }
+
+  function isOutboundLink(url) {
+    return (url.substring(0, 5) === "http");
+  }
 });
 
