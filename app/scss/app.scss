@@ -99,14 +99,22 @@ a {
 	text-align: center;
 	opacity: 0;
 
-	//background: rgba(255, 255, 255, 0.85);
-	@include single-transition(all, 200ms, linear);
+	@include single-transition(opacity, 150ms, ease-in);
 
 	&:hover {
 		opacity: 1;
 	}
 
 	span {
+
+		.entypo-icon {
+			font-family: 'EntypoRegular';
+			font-size: 1.5rem;
+			color: white;
+			padding: 0;
+			padding-top: 0.4rem;
+		}
+
 		margin: 0 auto;
 		margin-top: 20rem;
 		padding: 1rem 1.4rem;
