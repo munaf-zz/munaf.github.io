@@ -99,7 +99,7 @@ a {
 	text-align: center;
 	opacity: 0;
 
-	background: rgba(255, 255, 255, 0.85);
+	//background: rgba(255, 255, 255, 0.85);
 	@include single-transition(all, 200ms, linear);
 
 	&:hover {
