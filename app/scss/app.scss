@@ -108,7 +108,7 @@ footer ul a {
 	@include single-transition(opacity, 150ms, ease-in);
 
 	&:hover {
-		opacity: 1;
+		//opacity: 1;
 	}
 
 	span {

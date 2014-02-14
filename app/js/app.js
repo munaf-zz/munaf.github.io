@@ -45,7 +45,7 @@ $(document).ready(function() {
     }
   });
 
-  var $overlays = $(".overlay");
+  /*var $overlays = $(".overlay");
 
   $overlays.each(function() {
     var $overlay = $(this),
@@ -53,14 +53,12 @@ $(document).ready(function() {
         top = ($overlay.outerHeight() - $span.outerHeight())/2,
         left = ($overlay.outerWidth() - $span.outerWidth())/2;
 
-        console.log('padding=', $span.css('padding-top'));
-
     $overlay.css({
       "padding-top": top + parseInt($span.css('padding-top'))
       //"left": left
     });
 
-  });
+  });*/
 
   var $nextLinks = $('.chevron-right'),
       $prevLinks = $('.chevron-left'),
