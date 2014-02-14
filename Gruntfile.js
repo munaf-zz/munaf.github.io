@@ -273,7 +273,12 @@ module.exports = function (grunt) {
                     email: 'munaf.assaf@gmail.com'
                 }
             },
-            src: ['**/*']
+            'master': {
+                options: {
+                    branch: 'master'
+                },
+                src: ['**/*']
+            }
         }
     });
 
@@ -327,7 +332,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('deploy', [
         'build',
-        'gh-pages'
+        'gh-pages:master'
     ]);
 
     grunt.registerTask('default', [
