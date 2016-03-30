@@ -1,0 +1,45 @@
+// Auto-compiled with node-sass to site.min.css
+
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,500);
+
+$background-color: #fefefe;
+$accent-color: #50e3c2;
+$text-color: #222222;
+
+$font-stack: "Proxima Nova", "Avenir Next", "Work Sans", "Helvetica Neue", "Helvetica", sans-serif;
+$font-size-small: 14px;
+$font-size-big:   18px;
+$font-weight-light: 400;
+$font-weight-heavy: 500;
+
+body {
+  background: $background-color;
+  border-top: 8px solid $accent-color;
+  font-family: $font-stack;
+  color: $text-color;
+  margin: 0;
+  padding-top: 160px;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+p {
+  font-size: $font-size-big;
+  font-weight: $font-weight-light;
+  line-height: 28px;
+}
+
+a {
+  color: $accent-color;
+  font-weight: $font-weight-heavy;
+  text-decoration: none;
+}
+
+.title {
+  font-weight: $font-weight-heavy;
+}
+
+.links {
+  margin-top: 64px;
+  font-size: $font-size-small;
+}
